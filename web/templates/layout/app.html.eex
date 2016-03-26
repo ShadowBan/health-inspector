@@ -12,24 +12,65 @@
   </head>
 
   <body>
-    <div class="container">
-      <header class="header">
-        <nav role="navigation">
-          <ul class="nav nav-pills pull-right">
-            <li><a href="http://www.phoenixframework.org/docs">Get Started</a></li>
-          </ul>
-        </nav>
-        <span class="logo"></span>
-      </header>
+    <header class="header">
+      <div class="container">
+        <!-- Left side -->
+        <div class="header-left">
+          <a class="header-item" href="#">
+            <img src="http://craneu2.get-out-there.com/wp-content/uploads/2014/12/Customized-Safety-Training-Icon-01.png" alt="Logo">
+          </a>
+          <a class="header-tab" href="#">
+            Tab
+          </a>
+          <a class="header-tab is-active" href="#">
+            Active tab
+          </a>
+        </div>
 
-      <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
-      <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
+        <!-- Hamburger menu (on mobile) -->
+        <span class="header-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
 
-      <main role="main">
-        <%= render @view_module, @view_template, assigns %>
-      </main>
+        <!-- Right side -->
+        <div class="header-right header-menu">
+          <span class="header-item">
+            <a href="#">Nav item</a>
+          </span>
+          <span class="header-item">
+            <a href="#">Other nav item</a>
+          </span>
+          <span class="header-item">
+            <a class="button" href="#">Button</a>
+          </span>
+        </div>
+      </div>
+    </header>
 
-    </div> <!-- /container -->
+    <%=  msg_tag(@conn,:error) %>
+    <%=  msg_tag(@conn,:info) %>
+
+    <%= render @view_module, @view_template, assigns %>
+    
+    <footer class="footer">
+      <div class="container">
+        <div class="content is-centered">
+          <p>
+            <strong>Bulma</strong> by <a href="http://jgthms.com">Jeremy Thomas</a>. The source code is licensed
+            <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+            is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC ANS 4.0</a>.
+          </p>
+          <p>
+            <a class="icon" href="https://github.com/jgthms/bulma">
+              <i class="fa fa-github"></i>
+            </a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
     <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
   </body>
 </html>
