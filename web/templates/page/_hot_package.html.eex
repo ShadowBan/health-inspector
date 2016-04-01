@@ -1,0 +1,11 @@
+<div class="column">
+    <h2> <%= @pm %> </h2>
+    <hr>
+    <ul>
+      <li> Some package name 1 </li>
+      <li> Some package name 2 </li>
+      <li> Some package name 3 </li>
+      <li> Some package name 4 </li>
+      <li> Some package name 5 </li>
+    </ul>
+</div>
