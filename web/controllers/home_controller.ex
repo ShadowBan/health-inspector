@@ -1,4 +1,4 @@
-defmodule HealthInspector.PageController do
+defmodule HealthInspector.HomeController do
   use HealthInspector.Web, :controller
 
   def index(conn, _params) do

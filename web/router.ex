@@ -16,7 +16,8 @@ defmodule HealthInspector.Router do
   scope "/", HealthInspector do
     pipe_through :browser # Use the default browser stack
 
-    get "/", PageController, :index
+    get "/", HomeController, :index
+    post "/search", PackageController, :search
   end
 
   # Other scopes may use custom stacks.

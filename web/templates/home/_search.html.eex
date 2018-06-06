@@ -1,0 +1,4 @@
+<%= form_for @conn, package_path(@conn, :index), [as: :search], fn f -> %>
+  <%= text_input f, :for %>
+  <%= submit "Search" %>
+<% end %>
